@@ -530,17 +530,17 @@ skew(ibm.returns)
 
 In this exercise you'll calculate the *correlations* between different sets of returns.
   1. Calculate the sample correlation between Apple returns and IBM returns. Intepret your result.
-  2. Download price data for Bank of America stock (Quandl Code: GOOG/NYSE_BAC) over the same period used for Apple and IBM and construct daily log returns using closing prices.
-  3. Calculate the correlation between Apple and Bank of American returns, and Bank of America and IBM returns.
+  2. Download price data for Microsoft stock (...) over the same period used for Apple and IBM and construct daily log returns using closing prices.
+  3. Calculate the correlation between Apple and Microsoft returns, and Microsoft and IBM returns.
   4. Based on your answers to 1 and 3, which assets are most strongly correlated? Which are least strongly correlated? If wanted to "hedge your bets", which of these stocks would you choose to form a portfolio?
   
 ```{r exercise_6}
 #Exercise #6 - Correlations between Returns
-boa.prices = Quandl("GOOG/NYSE_BAC", start_date = "2016-01-01", end_date = "2016-12-31", type = "zoo")
-boa.returns = diff(log(boa.prices$Close))
-cor(boa.returns, apple.returns)
+microsoft.prices = ...
+microsoft.returns = diff(log(microsoft.prices$Close))
+cor(microsoft.returns, apple.returns)
 cor(apple.returns, ibm.returns)
-cor(boa.returns, ibm.returns)
+cor(microsoft.returns, ibm.returns)
 ```
 
 ### An Explanation of Log Returns (Optional)
